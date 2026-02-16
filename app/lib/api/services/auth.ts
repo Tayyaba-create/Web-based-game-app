@@ -49,10 +49,12 @@ export const authService = {
       const response = {
         success: true,
         data: {
+          id: `session-${sessionCode}`,
           code: sessionCode,
-          sessionCode: sessionCode,
-          status: "active",
-          playersJoined: 3,
+          status: "active" as const,
+          startedAt: new Date().toISOString(),
+          facilitatorId: "facilitator-1",
+          players: [],
         },
         error: null,
       };

@@ -134,7 +134,7 @@ export default function PlayerGamePage() {
         );
 
         if (!response.success) {
-          throw new Error(response.error || "Failed to fetch game progress");
+          throw new Error((response as any)?.error || "Failed to fetch game progress");
         }
 
         if (!response.data) {
@@ -286,7 +286,7 @@ export default function PlayerGamePage() {
       );
 
       if (!response.success) {
-        throw new Error(response.error || "Incorrect code");
+        throw new Error((response as any)?.error || "Incorrect code");
       }
 
       // Generate a random physical code to display

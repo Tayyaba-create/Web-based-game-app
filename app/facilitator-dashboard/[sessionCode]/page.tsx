@@ -76,14 +76,14 @@ function FacilitatorDashboardWithCodeContent() {
           setVerificationState({
             isVerifying: false,
             isVerified: false,
-            error: response.error || "Failed to verify session",
+            error: (response as any)?.error || "Failed to verify session",
           });
 
           // Redirect to error page after a short delay
           setTimeout(() => {
             router.push(
               `/session-error?error=${encodeURIComponent(
-                response.error || "Invalid session code",
+                (response as any)?.error || "Invalid session code",
               )}`,
             );
           }, 2000);
@@ -216,7 +216,7 @@ function FacilitatorDashboardWithCodeContent() {
         window.location.href = "/facilitator-login";
       } else {
         const errorMsg =
-          response.error || response.message || "Failed to finish session";
+          (response as any)?.error || (response as any)?.message || "Failed to finish session";
         alert(`Failed to finish session: ${errorMsg}`);
         setShowFinishConfirm(false);
       }
@@ -256,7 +256,7 @@ function FacilitatorDashboardWithCodeContent() {
         setShowUnlockConfirm(false);
         start();
       } else {
-        alert(`Failed to unlock session: ${response.error}`);
+        alert(`Failed to unlock session: ${(response as any)?.error}`);
       }
     } catch (error) {
       const errorMsg =

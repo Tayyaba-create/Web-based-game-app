@@ -97,7 +97,7 @@ function PlayerLoginContent() {
       );
 
       if (!joinResult.success) {
-        setError(joinResult.error || "Failed to join game");
+        setError((joinResult as any)?.error || "Failed to join game");
         setIsLoading(false);
         return;
       }

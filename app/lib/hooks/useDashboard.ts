@@ -155,7 +155,7 @@ export const useDashboard = () => {
             }
           }
         } else {
-          const errorMsg = response.error || "Failed to fetch dashboard data";
+          const errorMsg = (response as any)?.error || "Failed to fetch dashboard data";
           // Only set error if not a background fetch
           if (!isBackgroundFetch) {
             setError(errorMsg);

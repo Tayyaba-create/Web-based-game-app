@@ -73,7 +73,7 @@ export const useQueryStringSession = () => {
         setState({
           isVerifying: false,
           isVerified: false,
-          error: response.error || "Failed to verify session",
+          error: (response as any)?.error || "Failed to verify session",
           sessionCode,
         });
 

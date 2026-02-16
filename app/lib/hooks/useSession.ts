@@ -31,7 +31,7 @@ export const useSession = () => {
         if (response.success && response.data) {
           setSession(response.data);
         } else {
-          setError(response.error || "Failed to fetch session");
+          setError((response as any)?.error || "Failed to fetch session");
         }
         return response;
       } catch (err) {

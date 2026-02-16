@@ -213,7 +213,7 @@ function FacilitatorDashboardContent() {
         setShowUnlockConfirm(false);
         setShowQR(true);
       } else {
-        alert(`Failed to unlock session: ${response.error}`);
+        alert(`Failed to unlock session: ${(response as any)?.error}`);
       }
     } catch (error) {
       const errorMsg =
