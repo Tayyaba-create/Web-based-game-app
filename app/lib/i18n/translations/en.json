@@ -1,0 +1,41 @@
+{
+  "game": {
+    "title": "Game",
+    "loading": "Loading game...",
+    "error": "Error Loading Game",
+    "accessDenied": "Access Denied",
+    "mustLogin": "You must log in as a player to access the game.",
+    "backToLogin": "Back to Login",
+    "watchVideo": "Watch Video",
+    "unlockedBoxes": "Unlocked:",
+    "boxes": "Boxes",
+    "box": "Box",
+    "accessDeniedTitle": "Access Denied"
+  },
+  "modal": {
+    "congratulation": "🎉 Congratulation!",
+    "yourPhysicalCodeIs": "Your Physical Code is:",
+    "pleaseEnterDirectionSequence": "Please enter a direction sequence.",
+    "incorrectCode": "Incorrect code. Try again.",
+    "verifying": "Verifying...",
+    "submitCode": "Submit Code",
+    "unlocked": "Unlocked",
+    "success": "Success!",
+    "tryAgain": "Try Again"
+  },
+  "videoDialog": {
+    "enterPassword": "Enter Password",
+    "videoPasswordProtected": "This video is password protected",
+    "passwordPlaceholder": "Enter password",
+    "incorrectPassword": "Incorrect password. Please try again.",
+    "passwordVerifyError": "An error occurred while verifying password. Please try again.",
+    "passwordRequired": "Please enter a password.",
+    "submitPassword": "Submit Password",
+    "verifyingPassword": "Verifying..."
+  },
+  "sessionExpired": {
+    "title": "Session Expired",
+    "message": "The game session has ended. Please return to the dashboard to start a new session.",
+    "returnToLogin": "Return to Login Page"
+  }
+}

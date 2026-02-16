@@ -1,0 +1,41 @@
+{
+  "game": {
+    "title": "Juego",
+    "loading": "Cargando juego...",
+    "error": "Error al Cargar el Juego",
+    "accessDenied": "Acceso Denegado",
+    "mustLogin": "Debes iniciar sesión como jugador para acceder al juego.",
+    "backToLogin": "Volver al Inicio",
+    "watchVideo": "Ver Video",
+    "unlockedBoxes": "Desbloqueadas:",
+    "boxes": "Cajas",
+    "box": "Caja",
+    "accessDeniedTitle": "Acceso Denegado"
+  },
+  "modal": {
+    "congratulation": "🎉 ¡Felicitaciones!",
+    "yourPhysicalCodeIs": "Tu Código Físico es:",
+    "pleaseEnterDirectionSequence": "Por favor, ingresa una secuencia de direcciones.",
+    "incorrectCode": "Código incorrecto. Intenta de nuevo.",
+    "verifying": "Verificando...",
+    "submitCode": "Enviar Código",
+    "unlocked": "Desbloqueado",
+    "success": "¡Éxito!",
+    "tryAgain": "Intentar de Nuevo"
+  },
+  "videoDialog": {
+    "enterPassword": "Ingresa Contraseña",
+    "videoPasswordProtected": "Este video está protegido por contraseña",
+    "passwordPlaceholder": "Ingresa contraseña",
+    "incorrectPassword": "Contraseña incorrecta. Por favor, intenta de nuevo.",
+    "passwordVerifyError": "Ocurrió un error al verificar la contraseña. Por favor, intenta de nuevo.",
+    "passwordRequired": "Por favor, ingresa una contraseña.",
+    "submitPassword": "Enviar Contraseña",
+    "verifyingPassword": "Verificando..."
+  },
+  "sessionExpired": {
+    "title": "Sesión Expirada",
+    "message": "La sesión del juego ha terminado. Por favor, vuelve al panel para iniciar una nueva sesión.",
+    "returnToLogin": "Volver a la Página de Inicio"
+  }
+}
