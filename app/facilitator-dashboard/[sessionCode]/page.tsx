@@ -216,7 +216,9 @@ function FacilitatorDashboardWithCodeContent() {
         window.location.href = "/facilitator-login";
       } else {
         const errorMsg =
-          (response as any)?.error || (response as any)?.message || "Failed to finish session";
+          (response as any)?.error ||
+          (response as any)?.message ||
+          "Failed to finish session";
         alert(`Failed to finish session: ${errorMsg}`);
         setShowFinishConfirm(false);
       }

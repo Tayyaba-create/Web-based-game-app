@@ -134,7 +134,9 @@ export default function PlayerGamePage() {
         );
 
         if (!response.success) {
-          throw new Error((response as any)?.error || "Failed to fetch game progress");
+          throw new Error(
+            (response as any)?.error || "Failed to fetch game progress",
+          );
         }
 
         if (!response.data) {

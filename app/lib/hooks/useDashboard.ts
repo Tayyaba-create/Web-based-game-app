@@ -33,7 +33,7 @@ export interface DashboardData {
 // Helper function to compare data equality
 const isDataEqual = (
   oldData: DashboardData | null,
-  newData: DashboardData
+  newData: DashboardData,
 ): boolean => {
   if (!oldData) return false;
   return (
@@ -47,7 +47,7 @@ const isDataEqual = (
 
 const isPlayersEqual = (
   oldPlayers: DashboardPlayer[],
-  newPlayers: DashboardPlayer[]
+  newPlayers: DashboardPlayer[],
 ): boolean => {
   if (oldPlayers.length !== newPlayers.length) return false;
   return oldPlayers.every((oldPlayer, index) => {
@@ -71,7 +71,7 @@ const isPlayersEqual = (
 
 export const useDashboard = () => {
   const [dashboardData, setDashboardData] = useState<DashboardData | null>(
-    null
+    null,
   );
   const [players, setPlayers] = useState<DashboardPlayer[]>([]);
   const [loading, setLoading] = useState(false);
@@ -155,7 +155,8 @@ export const useDashboard = () => {
             }
           }
         } else {
-          const errorMsg = (response as any)?.error || "Failed to fetch dashboard data";
+          const errorMsg =
+            (response as any)?.error || "Failed to fetch dashboard data";
           // Only set error if not a background fetch
           if (!isBackgroundFetch) {
             setError(errorMsg);
@@ -173,7 +174,7 @@ export const useDashboard = () => {
         }
       }
     },
-    []
+    [],
   );
 
   // Fetch players data (fallback - players should come from dashboard)
@@ -232,7 +233,7 @@ export const useDashboard = () => {
       // Only fetch dashboard - it includes players data
       await fetchDashboard(sessionCode);
     },
-    [fetchDashboard]
+    [fetchDashboard],
   );
 
   // Start polling for real-time updates
@@ -250,7 +251,7 @@ export const useDashboard = () => {
         setIsPolling(false);
       };
     },
-    [isPolling, fetchDashboardData]
+    [isPolling, fetchDashboardData],
   );
 
   return {

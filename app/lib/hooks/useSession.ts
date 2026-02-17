@@ -43,7 +43,7 @@ export const useSession = () => {
         setLoading(false);
       }
     },
-    [setSession, setLoading, setError]
+    [setSession, setLoading, setError],
   );
 
   const fetchSessionDetails = useCallback(
@@ -64,7 +64,7 @@ export const useSession = () => {
         setLoading(false);
       }
     },
-    [setSessionDetails, setLoading, setError]
+    [setSessionDetails, setLoading, setError],
   );
 
   const joinSession = useCallback(
@@ -73,7 +73,7 @@ export const useSession = () => {
       try {
         const response = await sessionService.joinSession(
           sessionCode,
-          playerId
+          playerId,
         );
         if (response.success && response.data) {
           setSession(response.data);
@@ -88,7 +88,7 @@ export const useSession = () => {
         setLoading(false);
       }
     },
-    [setSession, setLoading, setError]
+    [setSession, setLoading, setError],
   );
 
   const endSession = useCallback(
@@ -109,7 +109,7 @@ export const useSession = () => {
         setLoading(false);
       }
     },
-    [updateSessionStatus, setLoading, setError]
+    [updateSessionStatus, setLoading, setError],
   );
 
   const addPlayer = useCallback(
@@ -125,14 +125,14 @@ export const useSession = () => {
       };
       addPlayerToStore(playerData);
     },
-    [addPlayerToStore]
+    [addPlayerToStore],
   );
 
   const removePlayer = useCallback(
     (playerId: string) => {
       removePlayerFromStore(playerId);
     },
-    [removePlayerFromStore]
+    [removePlayerFromStore],
   );
 
   return {

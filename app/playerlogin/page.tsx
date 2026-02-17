@@ -93,7 +93,7 @@ function PlayerLoginContent() {
         name.trim(),
         email.trim(),
         language,
-        gameSessionId || 0 // Use 0 as fallback, backend will handle it
+        gameSessionId || 0, // Use 0 as fallback, backend will handle it
       );
 
       if (!joinResult.success) {

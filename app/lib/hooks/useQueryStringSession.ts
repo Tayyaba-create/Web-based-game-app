@@ -105,7 +105,7 @@ export const useQueryStringSession = () => {
         : "";
       router.push(`/session-error${errorParam}`);
     },
-    [router]
+    [router],
   );
 
   return {
